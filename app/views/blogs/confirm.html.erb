@@ -1,17 +1,14 @@
 <section class="confirm">
-<h3>以下の内容で、送信する。</h3>
+  <h3>以下の内容で、送信する。</h3>
 
-<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
-  <%= form.hidden_field :shout %>
- 
+    <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+    <%= form.hidden_field :shout %>
+    <p>叫び:<%= @blog.shout %></p>
+    <%= form.submit  "納める" %>
+    <% end %>
 
-  <p>叫び:<%= @blog.shout %></p>
-  
-  <%= form.submit  "納める" %>
-<% end %>
-
-<%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
-  <%= form.hidden_field :shout %>
-  <%= form.submit "もどる", name: 'back' %>
-<% end %>
+    <%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :shout %>
+    <%= form.submit "もどる", name: 'back' %>
+    <% end %>
 </section>

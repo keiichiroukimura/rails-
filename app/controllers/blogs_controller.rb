@@ -41,12 +41,12 @@ class BlogsController < ApplicationController
       redirect_to blogs_path
   end
   
-  private
+    private
 
-  def blog_params
+    def blog_params
       params.require(:blog).permit(:shout)
-  end
-  def set_blog
+    end
+    def set_blog
       @blog = Blog.find(params[:id])
-  end 
+    end 
 end
