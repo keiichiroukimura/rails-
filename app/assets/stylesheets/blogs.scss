@@ -1,3 +1,49 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  background-color: #FF6666;
+ 
+}
+#title {
+ color: black;
+ text-align: center;
+}
+#about{
+ text-align: center;
+ font-size:2em;
+}
+#shout{
+    text-align: center;
+    font-size:3em;
+}
+table{
+    width:800px;
+}
+#voice{
+    font-size:3em;
+}
+td{
+    height:50px;
+}
+.function{
+　text-align: center;
+}
+
+footer{
+    background-color: #FF6666;
+    text-align: center;
+}
+#save{
+     text-align: center;
+}
+.shout{
+    text-align: center;
+ 
+}
+.confirm{
+    text-align: center;
+}
+input[type="text"]{
+    width:500px;
+}
