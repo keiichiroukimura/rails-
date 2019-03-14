@@ -1,0 +1,18 @@
+<h1>twinikitter(ツイニキター)</h1>
+　<h2>あなたの「ついに来たー！！」をシャウトしてください。</h2>
+　 <p>ツイニキター！！　一覧</p>
+   <br>
+    <%= link_to '叫んでみる', new_blog_path %>
+　
+<table>
+  <tr>
+    <th>叫び</th>
+　</tr>
+　　<% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.shout %></td>
+    <td><%= link_to '編集する', edit_blog_path(blog.id) %></td>
+    <td><%= link_to '削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  </tr>
+<% end %>
+</table>

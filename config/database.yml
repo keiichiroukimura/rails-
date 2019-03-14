@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  template: template0
+
+development:
+  <<: *default
+  database: twinikitter_development
+
+ 
+test:
+  <<: *default
+  database: twinikitter_test
+
+
+production:
+  <<: *default
+  database: twinikitter_production
+  username: twinikitter
+  password: <%= ENV['TWINIKITTER_DATABASE_PASSWORD'] %>
