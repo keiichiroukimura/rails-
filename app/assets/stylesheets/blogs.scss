@@ -3,11 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 header {
   background-color: #FF6666;
- 
+  
 }
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+}
+
 #title {
  color: black;
  text-align: center;
+ margin-top:0;
 }
 #about{
  text-align: center;
@@ -21,7 +27,7 @@ table{
     width:800px;
 }
 #voice{
-    font-size:3em;
+    font-size:2em;
 }
 td{
     height:50px;
@@ -33,6 +39,14 @@ td{
 footer{
     background-color: #FF6666;
     text-align: center;
+　　position: absolute;
+    bottom: 0; 
+    height: 50px;
+    
+}
+#copyright{
+    padding-top:15px;
+    margin-bottom: 0;
 }
 #save{
      text-align: center;

@@ -1,25 +1,24 @@
 <header>
-  <h1 id="title">twinikitter(ツイニキター)</h1>
+  <h1 id="title">twinikitter(ツイニキター!!)</h1>
 </header> 
+<div class="wrapper">
 　<h2 id="about">あなたの「ついに来たー！！」をシャウトしてください。</h2>
 　 <br>
     <div id="shout"><%= link_to '叫んでみる', new_blog_path %></div>
-　  <h3 id="about">ツイニキター！！　一覧</h3>
-
-<table border="1" align="center">
- <tr>
-   <caption id="voice">叫び</caption>
+    <table border="1" align="center">
+     <tr>
+   <caption id="voice">ツイニキター！！　一覧</caption>
    
-　</tr>
+    　</tr>
 　　<% @blogs.each do |blog| %>
-  <tr>
+      <tr>
     <td><%= blog.shout %></td>
     <td><%= link_to '編集する', edit_blog_path(blog.id) %></td>
     <td><%= link_to '削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
-
+      </tr>
+    <% end %>
+    </table>
+</div>
 <footer>
-   <p>© 2019 Copyright twinikitter Corp.</p>
+   <p id ="copyright">© 2019 Copyright twinikitter Corp.</p>
 </footer>
